@@ -1,41 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="contenedor-productos">
-    <h1>Supermercado Sami</h1>
-    <label for="cantidad-productos">Cantidad de productos a mostrar:</label>
-    <select name="cantidad-producto" id="select-producto">
-        <option value="1">1</option>
-        <option value="3">3</option>
-        <option value="7">7</option>
-        <option value="10">10</option>
-    </select>
-    <br>
-    <label for="cantidad-permitida-productos">Cantidad permitida por cada producto:</label>
-    <select name="cantidad-permitida" id="select-cantidad-permitida">
-        <option value="1">1</option>
-        <option value="15">15</option>
-        <option value="25">25</option>
-        <option value="50">50</option>
-    </select>
-    <br>
-    <label for="colores">Colores</label>
-    <select name="selct-colores" id="select-colores">
-        <option value="ninguno">Ninguno</option>
-        <option value="rojo-amarillo">Rojo-Amarillo</option>
-        <option value="verde-violeta">Verde-Violeta</option>
-        <option value="azul-gris">Azul-Gris</option>
-    </select>
-</div>
-<button onclick="generar()">Generar</button>
+<html lang="es">
 
-    <script src="script.js"></script>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Cards - Tarjetas con efecto Hover</title>
+	<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+	<div class="title-cards">
+		<h1>Supermercado Sami</h1>
+		<br>
+		<!--Parametros-->
+		<label for="cantidad-productos">Cantidad de productos a mostrar:</label>
+		<select class="select" name="cantidad-producto" id="select-producto">
+			<option value="1">1</option>
+			<option value="3">3</option>
+			<option value="7">7</option>
+			<option value="10">10</option>
+		</select>
+		<br>
+		<label for="cantidad-permitida-productos">Cantidad permitida por cada producto:</label>
+		<select class="select" name="cantidad-permitida" id="select-cantidad-permitida">
+			<option value="1">1</option>
+			<option value="15">15</option>
+			<option value="25">25</option>
+			<option value="50">50</option>
+		</select>
+		<br>
+		<label for="colores">Colores</label>
+		<select class="select" name="selct-colores" id="select-colores" >
+			<option value="white-white">Ninguno</option>
+			<option value="#f1aeae-#ededab">Rojo-Amarillo</option>
+			<option value="#a4f5a4-#f3b9f3">Verde-Violeta</option>
+			<option value="#94bfed-lightgrey">Azul-Gris</option>
+		</select>
+		<div>
+			<button class="butonPrimary" onclick="generar()">Generar</button>
+		</div>
+		<!--Muestra parametros ingresados-->
+		<div id="ParamSelect" class="divParamSelect">
+
+		</div>
+	</div>
+
+	<div id="productos-container" class="container-card">
+		<!-- Aquí se mostrarán los productos -->
+	</div>
+
+	<!--Inicio   Tarjetas-->
+	<!--<div class="container-card">
+		<div class="card">
+			<figure>
+				<img src="img/listado-lechelita-quesos-crema-entero.png">
+			</figure>
+			<div class="contenido-card">
+				<h3>Diseño Gràfico</h3>
+				<p>Podemos crear la identidad corporativa de tu empresa. Diseño , Maquetación de folletos, Catálogos,
+					Papelería y mucho más.</p>
+				<a href="#">Leer Màs</a>
+			</div>
+		</div>
+		<div class="card">
+			<figure>
+				<img src="img/5954b954deaf2c03413be345.png">
+			</figure>
+			<div class="contenido-card">
+				<h3>Gestión de Redes</h3>
+				<label>Seleccione pago</label>
+				<select class="select-card">
+					<option value="1">Efectivo</option>
+					<option value="2">Debito</option>
+					<option value="3">Credito</option>
+				</select>
+				<label>Seleccione cantidades</label>
+				<select class="select-card">
+					<option value="1">Efectivo</option>
+					<option value="2">Debito</option>
+					<option value="3">Credito</option>
+				</select>
+				<button class="btn-card">Comprar</button>
+			</div>
+		</div>
+		<div class="card">
+			<figure>
+				<img src="img/papas-38-gr.png">
+			</figure>
+			<div class="contenido-card">
+				<h3>Desarrollo Web</h3>
+				<p>Creamos tu página web utilizando las últimas tecnologías disponibles. Una Web adaptativa a tu móvil o
+					Tablet y con un gestor de contenido fácil.</p>
+				<a href="#">Leer Màs</a>
+			</div>
+		</div>
+		<div class="card">
+			<figure>
+				<img src="img/pringles-chica1-f6b1f55732d4070deb16445069474378-640-0.png">
+			</figure>
+			<div class="contenido-card">
+				<h3>Diseño Gràfico</h3>
+				<p>Podemos crear la identidad corporativa de tu empresa. Diseño , Maquetación de folletos, Catálogos,
+					Papelería y mucho más.</p>
+				<a href="#">Leer Màs</a>
+			</div>
+		</div>
+		<div class="card">
+			<figure>
+				<img src="img/queso-holanda.png">
+			</figure>
+			<div class="contenido-card">
+				<h3>Gestión de Redes</h3>
+				<p>Nosotros creamos y optimizamos tus perfiles en las Redes Sociales. Importantes para que tu presencia
+					online sea completa.</p>
+				<a href="#">Leer Màs</a>
+			</div>
+		</div>
+		<div class="card">
+			<figure>
+				<img src="img/sancor-manteca-200g-byb1-cc77d9f4db15061eba15913919669798-1024-1024.png">
+			</figure>
+			<div class="contenido-card">
+				<h3>Desarrollo Web</h3>
+				<p>Creamos tu página web utilizando las últimas tecnologías disponibles. Una Web adaptativa a tu móvil o
+					Tablet y con un gestor de contenido fácil.</p>
+				<a href="#">Leer Màs</a>
+			</div>
+		</div>
+		<div class="card">
+			<figure>
+				<img src="img/lactal-blanco-chico-byb1-4cb0032f01afa6635d16017364445003-1024-1024.png">
+			</figure>
+			<div class="contenido-card">
+				<h3>Diseño Gràfico</h3>
+				<p>Podemos crear la identidad corporativa de tu empresa. Diseño , Maquetación de folletos, Catálogos,
+					Papelería y mucho más.</p>
+				<a href="#">Leer Màs</a>
+			</div>
+		</div>
+		<div class="card">
+			<figure>
+				<img src="img/214391-1534456298.png">
+			</figure>
+			<div class="contenido-card">
+				<h3>Gestión de Redes</h3>
+				<p>Nosotros creamos y optimizamos tus perfiles en las Redes Sociales. Importantes para que tu presencia
+					online sea completa.</p>
+				<a href="#">Leer Màs</a>
+			</div>
+		</div>
+	</div>-->
+	<!--Fin   Tarjetas-->
+	<script src="script.js"></script>
 </body>
+
 </html>

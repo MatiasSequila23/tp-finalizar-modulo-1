@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="contenedor-productos">
+    <h1>Supermercado Sami</h1>
+    <label for="cantidad-productos">Cantidad de productos a mostrar:</label>
+    <select name="cantidad-producto" id="select-producto">
+        <option value="1">1</option>
+        <option value="3">3</option>
+        <option value="7">7</option>
+        <option value="10">10</option>
+    </select>
+    <br>
+    <label for="cantidad-permitida-productos">Cantidad permitida por cada producto:</label>
+    <select name="cantidad-permitida" id="select-cantidad-permitida">
+        <option value="1">1</option>
+        <option value="15">15</option>
+        <option value="25">25</option>
+        <option value="50">50</option>
+    </select>
+    <br>
+    <label for="colores">Colores</label>
+    <select name="selct-colores" id="select-colores">
+        <option value="ninguno">Ninguno</option>
+        <option value="rojo-amarillo">Rojo-Amarillo</option>
+        <option value="verde-violeta">Verde-Violeta</option>
+        <option value="azul-gris">Azul-Gris</option>
+    </select>
+    <div id="detalleSelect" class="divDetalleSelect">
+
+    </div>
+</div>
+<button onclick="generar()">Generar</button>
+    <script src="script.js"></script>
+
+</body>
+</html>

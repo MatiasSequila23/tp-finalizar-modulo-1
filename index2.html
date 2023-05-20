@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Cards - Tarjetas con efecto Hover</title>
+	<link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+	<div class="title-cards">
+		<h1>Supermercado Sami</h1>
+		<br>
+		<!--Parametros-->
+		<label for="cantidad-productos">Cantidad de productos a mostrar:</label>
+		<select class="select" name="cantidad-producto" id="select-producto">
+			<option value="1">1</option>
+			<option value="3">3</option>
+			<option value="7">7</option>
+			<option value="10">10</option>
+		</select>
+		<br>
+		<label for="cantidad-permitida-productos">Cantidad permitida por cada producto:</label>
+		<select class="select" name="cantidad-permitida" id="select-cantidad-permitida">
+			<option value="1">1</option>
+			<option value="15">15</option>
+			<option value="25">25</option>
+			<option value="50">50</option>
+		</select>
+		<br>
+		<label for="colores">Colores</label>
+		<select class="select" name="selct-colores" id="select-colores" >
+			<option value="white-white">Ninguno</option>
+			<option value="#f1aeae-#ededab">Rojo-Amarillo</option>
+			<option value="#a4f5a4-#f3b9f3">Verde-Violeta</option>
+			<option value="#94bfed-lightgrey">Azul-Gris</option>
+		</select>
+		<div>
+			<button class="butonPrimary" onclick="generar()">Generar</button>
+		</div>
+		<!--Muestra parametros ingresados-->
+		<div id="ParamSelect" class="divParamSelect">
+
+		</div>
+	</div>
+
+	<div id="productos-container" class="container-card">
+		<!-- Aquí se mostrarán los productos -->
+	</div>
+	<script src="script2.js"></script>
+</body>
+
+</html>
